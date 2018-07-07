@@ -441,9 +441,9 @@ class FrontController extends Singleton
         try {
             $logo = new CustomLogo();
             if ($logo->hasSVGLogo()) {
-                $logoUrl = $logo->getSVGLogoUrl();
+                $logoUrl = $logo->getSVGLogoUrl(true);
             } else {
-                $logoUrl = $logo->getHeaderLogoUrl();
+                $logoUrl = $logo->getHeaderLogoUrl(true);
             }
             $faviconUrl = $logo->getPathUserFavicon();
         } catch (Exception $ex) {

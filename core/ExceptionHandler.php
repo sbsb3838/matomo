@@ -105,9 +105,9 @@ class ExceptionHandler
         try {
             $logo = new CustomLogo();
             if ($logo->hasSVGLogo()) {
-                $logoHeaderUrl = $logo->getSVGLogoUrl();
+                $logoHeaderUrl = $logo->getSVGLogoUrl(true);
             } else {
-                $logoHeaderUrl = $logo->getHeaderLogoUrl();
+                $logoHeaderUrl = $logo->getHeaderLogoUrl(true);
             }
             $logoFaviconUrl = $logo->getPathUserFavicon();
         } catch (Exception $ex) {

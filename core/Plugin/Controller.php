@@ -699,9 +699,9 @@ abstract class Controller
 
         $this->addCustomLogoInfo($view);
 
-        $view->logoHeader = \Piwik\Plugins\API\API::getInstance()->getHeaderLogoUrl();
-        $view->logoLarge = \Piwik\Plugins\API\API::getInstance()->getLogoUrl();
-        $view->logoSVG = \Piwik\Plugins\API\API::getInstance()->getSVGLogoUrl();
+        $view->logoHeader = \Piwik\Plugins\API\API::getInstance()->getHeaderLogoUrl(true);
+        $view->logoLarge = \Piwik\Plugins\API\API::getInstance()->getLogoUrl(true);
+        $view->logoSVG = \Piwik\Plugins\API\API::getInstance()->getSVGLogoUrl(true);
         $view->hasSVGLogo = \Piwik\Plugins\API\API::getInstance()->hasSVGLogo();
         $view->superUserEmails = implode(',', Piwik::getAllSuperUserAccessEmailAddresses());
 
